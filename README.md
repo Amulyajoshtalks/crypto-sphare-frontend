@@ -1,12 +1,71 @@
-# React + Vite
+# 💹 Cryptocurrency Tracker - Full Stack Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack cryptocurrency tracking and conversion application built with **React + Vite** on the frontend and **Express + Node.js** backend acting as a proxy to the CoinMarketCap API.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Technologies Used
 
-## Expanding the ESLint configuration
+- **Frontend**: React, Vite, Tailwind CSS, Axios, Framer Motion
+- **Backend**: Node.js, Express, Axios, dotenv, CORS
+- **API**: CoinMarketCap (via backend proxy)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Project Features
+
+- Live listing of top 100 cryptocurrencies
+- Real-time currency conversion using CoinMarketCap
+- Mobile-first responsive design
+- Favorite coin caching via LocalStorage
+- Animations for interactive UI
+- Clean error handling and retry mechanisms
+- Production-ready architecture
+
+---
+
+## 🖥️ Architecture Overview
+
+### ⚙️ Why React + Vite?
+- **Fast Development** with Hot Module Replacement
+- **Component-Based UI** for modular design
+- **Great Performance** using ES modules and efficient builds
+- **Scalable & Maintainable** code structure
+
+### 🧱 App Diagram
+
+┌──────────────────────┐ ┌──────────────────────┐
+│ CoinMarketCap │ │ Backend │
+│ API │◄─────►│ Proxy │
+└──────────────────────┘ └──────────────────────┘
+▲ ▲
+│ │
+▼ ▼
+┌──────────────────────┐ ┌──────────────────────┐
+│ Frontend │ │ LocalStorage │
+│ (React with Vite) │───────│ (Favorites Cache) │
+└──────────────────────┘ └──────────────────────┘
+│
+▼
+┌──────────────────────┐
+│ Browser │
+└──────────────────────┘
+
+
+---
+
+## 📁 Folder Structure
+
+src/
+├── assets/            # Static assets
+├── components/        # Reusable components
+│   ├── common/        # Common UI components
+│   ├── converter/     # Converter components
+│   └── home/          # Homepage components
+├── context/           # Global state management
+├── hooks/             # Custom React hooks
+├── pages/             # Application pages
+├── services/          # API services
+├── styles/            # Global styles and animations
+├── App.jsx            # Main application component
+└── main.jsx           # Application entry point
