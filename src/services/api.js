@@ -3,7 +3,7 @@ import axios from 'axios';
 // Use proxy in development, in production you'd use your deployed proxy URL
 const API_BASE = import.meta.env.DEV 
   ? 'https://crypto-sphare-backend.onrender.com/api' 
-  : '/api';
+  : 'https://crypto-sphare-backend.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_BASE,
