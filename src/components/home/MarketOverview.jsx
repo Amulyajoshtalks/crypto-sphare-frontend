@@ -37,6 +37,7 @@ const MarketOverview = ({ cryptos }) => {
   };
 
   return (
+    
     <motion.div 
       className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-5 shadow-xl border border-gray-700"
       initial={{ opacity: 0, y: 20 }}

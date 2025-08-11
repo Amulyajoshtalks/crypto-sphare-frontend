@@ -9,6 +9,9 @@ const Header = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const handleTheme=()=>{
+    
+  }
 
   return (
     <header className="bg-gradient-to-r from-gray-900 to-blue-900 shadow-xl">
@@ -42,6 +45,21 @@ const Header = () => {
           {/* For Desktop View  */}
           <nav className="hidden md:block">
             <ul className="flex space-x-2">
+              <li>
+                <NavLink 
+               onClick={handleTheme}
+                  className={({ isActive }) => 
+                    `px-4 py-2 rounded-lg transition-all flex items-center ${
+                      isActive 
+                        ? 'bg-gradient-to-r from-cyan-600 to-blue-700 text-white shadow-lg' 
+                        : 'text-gray-200 hover:bg-blue-800/50'
+                    }`
+                  }
+                >
+                  <FaChartLine className="mr-2" />
+                  Toogle Theme
+                </NavLink>
+              </li>
               <li>
                 <NavLink 
                   to="/" 
